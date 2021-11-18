@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #ffffff;
+    font-family: 'Open Sans',sans-serif;
+}
+.tabs{
+    width: 600px;
+    margin: 75px auto;
+}
+.tabs ul,
+.tabs li{
+    list-style: none;
+    padding: 0;
+}
+.tabs .labels:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.tabs label{
+    display: inline-block;
+    float: left;
+    padding: 10px 20px;
+    background: #c9c9c9;
+    font-size: 1.4em;
+    color: #000000;
+    cursor: pointer;
+}
+.tabs label:hover{
+    background: #292929;
+    color: #ffffff;
+}
+.tabs .tab-content{
+    width: 100%;
+    padding: 15px;
+    border:1px solid #c9c9c9;
+    display: none;
+}
+.tabs input[type=radio]{
+    display: none;
+}
+.tabs [id^=tab]:checked ~ div[id^=tab-content]{
+    display: block;
+}
